@@ -1,0 +1,229 @@
+@import "/src/styles/index.scss";
+
+.btn {
+  border-radius: 0;
+  padding: 0.5rem 1.8rem;
+}
+.text-bold {
+  font-weight: bold;
+}
+main {
+  .heading {
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .sub-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    filter: drop-shadow(7px 7px 12px rgba(0, 0, 0, 0.25));
+  }
+  .banner {
+    background: url("../assets/images/banner-bg.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    font-family: "Open Sans", sans-serif;
+
+    .banner-display {
+      font-weight: 900;
+      font-size: 3rem;
+      text-transform: capitalize;
+      @media screen and (min-width: 768px) {
+        font-size: 4rem;
+        margin-top: 2rem;
+      }
+      span {
+        color: $warning;
+      }
+    }
+
+    .banner-wrapper {
+      background-color: rgba($primary, 0.5);
+      height: inherit;
+
+      .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @media screen and (min-width: 768px) {
+          h1 {
+            margin-bottom: 4rem;
+          }
+        }
+      }
+      .banner-caption {
+        font-size: 1.5rem;
+        font-style: italic;
+      }
+    }
+    .box {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      position: relative;
+      p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+      @media screen and (min-width: 786px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .global {
+    background: url("../assets/images/particules.png");
+    background-position: right;
+    background-size: contain;
+    // background-repeat: no-repeat;
+    .bottom-bg {
+      background: url("../assets/images/pic-1.png");
+      height: 20vh;
+      background-position: center;
+      background-size: cover;
+    }
+    &-title {
+      padding-top: 2rem;
+      margin-bottom: 3rem;
+      .line-top {
+        height: 2px;
+        background-color: $dark;
+        width: 100%;
+        max-width: 13rem;
+        margin: 0 auto;
+        margin-bottom: 3px;
+      }
+    }
+    .section-flex {
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      .item {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 100%;
+          max-width: 6rem;
+        }
+        .text_content {
+          margin-left: 1rem;
+          .title {
+            font-weight: 600;
+          }
+        }
+      }
+      @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        // justify-content: space-between;
+      }
+    }
+  }
+
+  .about {
+    .heading {
+      text-align: center;
+      padding-top: 2rem;
+      margin-bottom: 2rem;
+      color: $primary;
+    }
+    .box-wrapper {
+      margin-bottom: 1.4rem;
+      .text-content {
+        p {
+          margin: 0.8rem 0;
+          font-size: 0.9rem;
+        }
+      }
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        display: flex;
+        // align-items: center;
+        gap: 2rem;
+        .text-content {
+          width: 50%;
+        }
+        .image {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .services {
+    @extend .about;
+  }
+
+  .contact {
+    padding: 1rem 0;
+    .contact-heading {
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+    }
+    .form-control {
+      margin-bottom: 1rem;
+      padding: 0.7rem;
+      border-radius: 0;
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+    form {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    &-bg {
+      height: 20vh;
+      background-image: url("../assets/images/pic-7.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 1rem;
+    }
+    hr {
+      background-color: #fff;
+    }
+
+    &-footer {
+      margin-top: 2rem;
+      h1 {
+        color: $light;
+        margin-top: 1rem;
+      }
+      &-inner {
+        display: flex;
+        // background-color: red;
+        // flex-direction: column;
+        justify-content: center;
+      }
+      &-wrapper {
+        h6 {
+          margin: 1rem 0;
+        }
+        &_item {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+          img {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

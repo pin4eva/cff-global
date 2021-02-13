@@ -1,0 +1,19 @@
+@import "/src/styles/index.scss";
+header {
+  .navbar {
+    @extend .container;
+    .navbar-collapse {
+      // background-color: red;
+      @media screen and (min-width: 768px) {
+        flex-basis: auto;
+        flex-grow: 0;
+        align-items: flex-end;
+      }
+      @media screen and (max-width: 767px) {
+        .navbar-nav {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
